@@ -1,4 +1,471 @@
+/*VARIABLES*/
+@gray-darker:            lighten(#000, 13.5%); // #222
+@gray-dark:              lighten(#000, 20%);   // #333
+@gray:                   lighten(#000, 33.5%); // #555
+@gray-light:             lighten(#000, 46.7%); // #777
+@gray-lighter:           lighten(#000, 93.5%); // #eee
+
+@brand-primary:         darken(cyan, 5%);
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+
+@magenta:               #e10179;
+@cyan-header:						darken(#2CA396, 5%);
+@nav-hover: 						rgba(18,214,231,.2);
+@gray-white: 						lighten(#CBC9CF, 50%);
+@magenta-barcelona: 		#FF004E;
+@color-precio: 					darken(#FF004E, 4%);
+@info-back: 						lighten(@brand-primary, 40%);
+@circle: 								darken(#31708f, 5%);
+@color-compra: 					darken(@color-precio, 5%);
+@border-compra: 				#bababa;
+@back-magenta-hover: 		rgba(255,5,82,0.2);
+/*@back-btn-compra: 		"../images/bd_sprite_pagos.svg";*/
+
+/*GENERAL STYLES*/
+
 body {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
+	font-size: 16px;
+}
+
+a {
+	color: @magenta;
+	&:hover {
+		color: @magenta-barcelona;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: @magenta-barcelona;
+}
+
+.btn-primary {
+	background-color: @brand-primary;
+	border-color: @brand-primary;
+
+	&:hover,
+	&:focus {
+		background-color: @cyan-header;
+		border-color: @cyan-header;
+	}
+}
+
+/*STYLES*/
+
+.main {
+	margin: 0;
+}
+
+.header {
+	/*background: url(../images/header.jpg) center center no-repeat;*/
+}
+
+.container-menu {
+	height: 65px;
+	background-color: @cyan-header;
+	/*position: fixed;*/
+	z-index: 1100;
+	width: 100%;
+	
+	.menu-nav {
+		/*padding-top: 1%;*/
+	}
+
+	.logo {
+		text-indent: -9999px;
+		background: url(../images/bd_logo.png) top left no-repeat;
+		width: 250px;
+		height: 50px;
+		float: left;
+		margin: 0;
+		display: block;
+		position: relative;
+		top: 10px;
+	}
+
+	.menu {
+		.list {
+			padding: 0;
+			margin: 0;
+			text-align: right;
+			height: 100%;
+
+			.go {
+				text-decoration: none;
+				height: 100%;
+				width: 115px;
+				text-align: center;
+				line-height: 65px;
+				padding: 0 1rem;
+				display: block;
+				color: white;
+				font-weight: 400;
+
+
+				&:hover,
+				&:focus {
+					color: @gray-lighter;
+					font-size: 1.5rem;
+				}
+			}
+
+			.login {
+				border: 1px solid white;
+				border-radius: 5px;
+				line-height: 40px;
+				height: 42px;
+				padding-left: 10%;
+				margin-left: 14%;
+
+				&:hover,
+				&:focus {
+					background-color: @magenta-barcelona;
+					border-color: @magenta-barcelona;
+					color: white;
+					font-size: 16px;
+				}
+
+				&:focus,
+				&:active {
+					outline-offset: -2px;
+					box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+				}
+			}
+		}
+	}
+}
+
+.inline {
+	display: inline-block;
+}
+
+.welcome {
+	height: 50rem;
+	margin-top: 10% !important;
+
+	.tittle {
+		font-size: 6rem;
+		font-weight: 300;
+	}
+	
+	.copy {
+		font-size: 1.8rem;
+		margin-bottom: 5%;
+	}
+
+	.call-to-action {
+		padding-left: 0;
+	}
+
+	.container-goplan {
+		padding-left: 0;
+		padding-top: 3%;
+
+		.goplan {
+			width: 100%;
+			height: 45px;
+			font-size: 1.6rem;
+			clear: right;
+			padding-left: 0;
+		}
+	}
+	
+	.go-libray {
+		clear: left;
+		margin: 5% 5%;
+		padding-top: 5%;
+		display: block;
+	}
+}
+
+/*QUE ES BARCELONA*/
+.backgroud-mixin (@pos-left, @pos-top, @width, @height, @top){
+	background-position: @pos-left @pos-top;
+	width: @width;
+	height: @height;
+	top: @top;
+}
+
+.barcelona {
+	margin: 15% auto;
+	height: 740px;
+
+	.tittle-bd {
+		font-size: 3.5rem;
+		margin-bottom: 4%;
+	}
+
+	.intro {
+			text-align: center;
+		}
+
+	.container-features {
+		margin: 38% 0px;
+
+		.features {
+			font-size: 1.8rem;
+			margin-top: 10%;
+			
+			&:before {
+			background: url(../images/sprite_bcd.png) no-repeat top left;
+			position: absolute;
+			content: "";
+			}
+		}
+
+		.no-limit{
+			&:before{
+				.backgroud-mixin (0,0,260px,305px,-315px);
+				left: 76px;
+			}
+		}
+
+		.digital {
+			&:before{
+				.backgroud-mixin (-300px,0,260px,305px,-315px);
+				left: 100px;
+			}
+		}
+	}
+}
+
+/* SUSCRIPCION ITEMS*/
+.suscription {
+	background-color: @gray-lighter;
+	height: 580px;
+
+	.options {
+		padding-top: 7%;
+	}
+
+	.text-options {
+		margin-top: 3%;
+
+		.bold {
+			font-weight: 500;
+			margin-top: 10%;
+		}
+
+		.desktop { /*boton visible en desktop*/
+			margin-top: 10%;
+			width: 200px;
+
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+	}
+}
+
+.mobile {
+	@media (min-width: 990px){
+		display: none;
+	}
+}
+
+.options-suscribe {
+	background: @gray-light;
+}
+
+.row {
+	margin: 0;
+}
+
+.tittle {
+	color: @magenta;
+	font-size: 1.9em;
+	margin: 4% 0px 6%;
+}
+
+.hello {
+	margin-bottom: 4%;
+	margin-top: 3%;
+	color: @gray;
+}
+
+.sub-tittle {
+	font-size: 1.25em;
+	font-weight: 300;
+	margin-top: 2%;
+}
+
+.number {
+	position: relative;
+	top: 5px;
+	font-size: 1.6em;
+	color: lighten(@color-compra, 15%);
+	margin-right: 1%;
+}
+
+// ELECCION DEL PLAN DE PAGO
+
+.paiment-plan {
+	
+	.plan {
+		text-align: center;
+		width: 200px;
+		margin: 4px;
+		margin-bottom: 10%;
+		padding: 0;
+		border-radius: 4px;
+		border: 1px solid @gray-lighter;
+		box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+		position: relative;
+		top: 15px;
+		background-color: white;
+
+		&:hover,
+		&:active,
+		&:focus {
+			box-shadow: 0px 0px 7px @color-precio;
+			border-color: @color-precio;
+		}
+
+		.head {
+			background-color: @color-precio;
+			height: 80px;
+			padding-top: 16px;
+			color: white;
+		}
+	}
+
+	.card {
+		width: 230px;
+		
+		&:after {
+			left: -62px;
+		}
+		.moneda {
+			left: 90px;
+		}
+	}
+
+	.signo {
+		position: absolute;
+		left: 55px;
+		top: 15px;
+		font-size: 18px;
+	}
+
+	.precio {
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 40px;
+	}
+  
+  .moneda {
+		font-size: 14px;
+		left: 78px;
+		position: absolute;
+		text-transform: uppercase;
+		top: 53px;
+
+		&:after {
+			border-left: 98px solid transparent;
+			border-right: 98px solid transparent;
+			left: -78px;
+			position: absolute;
+			top: 23px;
+			border-top: 22px solid @color-precio;
+			content: "";
+		}
+	}
+
+	.periodo {
+		padding-top: 10%;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+	
+	.ventajas {
+		
+		background: @gray-white;
+		.items {
+			padding: 10px 0px;
+			margin: 0;
+		
+			&:nth-child(2n+1) {
+				background-color: @gray-lighter;
+			}
+		}
+
+		.choise{
+			padding: 2%;
+			margin: 0 5% 2%;
+		}
+
+		input[type=radio] + span {
+			color: @gray;
+			font-weight: 300;
+			font-size: 12px;
+			text-align: center;
+			border: 2px solid @border-compra;
+			margin: 0;
+			padding: 6% 15%;
+			border-radius: 6px;
+			overflow: auto;
+			display: block;
+		}
+
+		input[type=radio]:checked + span {
+			color: white;
+			font-style: normal;
+			font-size: 11px;
+			text-transform: uppercase;
+			background: @color-compra;
+			border: 2px solid @color-compra
+		}
+
+		.select-plan {		
+			padding: 10% 0px 6%;
+			display: block;
+			margin: 2% 0;
+
+			> input {
+				display: none;
+			}
+			
+			&:focus {
+				background: @color-precio;
+			}
+		}
+	}
+}
+
+/*CONTACT-US*/
+
+.contact-us {
+	text-align: center;
+
+	.contact {
+		padding-top: 5%;
+		height: 500px;
+
+		.personal-dates {
+			width: 100%;
+			padding-left: 15%;
+			height: 50px;
+			border: 2px solid @cyan-header;
+			border-radius: 5px;
+		}
+
+		.consulta {
+			width: 100%;
+			height: 200px;
+			padding-top: 0;
+		}
+
+		.send {
+			float: right;
+		}
+	}
 }

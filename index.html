@@ -5,127 +5,167 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400italic,700,300,600,400' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
 	<link rel="stylesheet" href="bootstrap-styles/bootstrap.min.css">
+<!-- 	<link rel="stylesheet" href="node_modules/normalize/normalize.css"> -->
 	<link rel="stylesheet" href="css/main.css">
-	<title>Kiosko Digital</title>
+	<title>Barcelona Digital</title>
 </head>
 <body>
-	<header class="main">
-		<nav class="menu">
-			<ul>
-				<li class="plan">Planes</li>
-				<li class="contact">Contátenos</li>
-				<li class="faq">Preguntas Frecuentes</li>
-				<li class="login">Ingresar</li>
-			</ul>
-		</nav>
+	<header class="main header">
+		<div class="container-menu">
+			<div class="container menu-nav">
+				<a href="#" class="logo">Barcelona Digital</a>
+				<nav class="menu">
+					<ul class="list">
+						<li class="inline"><a href="#planes" class="go">Planes</a></li>
+						<li class="inline"><a href="#contact-us" class="go">Contátenos</a></li>
+						<!-- <li class="inline"><a href="" class="go">Preguntas Frecuentes</a></li> -->
+						<li class="inline"><a href="#" class="go login">Ingresar</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="welcome col-md-6 col-md-offset-6">
+					<h1 class="tittle">Ingrese al mundo Barcelona</h1>
+					<div class="container-copy">
+						<p class="copy">Una nueva, moderna y menos onerosa manera de disfrutar, gozar, indignarse, putear y desinformarse con Revista Barcelona.<br>
+						Tiene exactamente los mismos contenidos que la que se adquiere cada 14 días en los kioscos, pero un precio distinto. <br>
+						¡Y no mancha los dedos!
+						<div class="container-fluid call-to-action">
+							<div class="row">
+								<div class="col-xs-12 col-md-6 container-goplan">
+									<button class="btn btn-primary goplan">Adquiera su plan</button>
+								</div>
+								<div class="col-xs-12 col-md-6">
+									<a href="" class="go-libray">deseo la versión de prueba</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
-	<section class="hello">
-		<h1>Ingrese al mundo Barcelona</h1>
-		<p>una nueva, moderna y menos onerosa manera de disfrutar, gozar, indignarse, putear y desinformarse con Revista Barcelona.</p>
-		<p>Tiene exactamente los mismos contenidos que la que se adquiere cada 14 días en los kioscos, pero un precio distinto. ¡Y no mancha los dedos!</p>
-		<button>Adquiera su plan</button>
-		<a href="">ingresar a la bilioteca</a>
-	</section>
 	<section class="barcelona">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h2>¿Qué es Barcelona Digital?</h2>
+				<div class="col-md-6 col-md-offset-3 intro">
+					<h2 class="tittle-bd">¿Qué es Barcelona Digital?</h2>
 					<p>BarcelonaDigital es la versión online de la Revista Barcelona que en su tradicional versión en papel.
-					<i>se publica en Buenos Aires, Argentina, desde abril de 2003.</i></p>
+					<i class="small">Se publica en Buenos Aires, Argentina, desde abril de 2003.</i></p>
 				</div>
-				<div class="col-md-6">
-					<p>llegamos a todo el globo, sin límites de distancias, recorridos, monopolios ni cepos cambiarios.
-						Aquí encontrará las mismas genialidades e imbecilidades que se publican cada dos semanas en la Revista Barcelona convencional</p>
-				</div>
-				<div class="col-md-6">
-					<p>En lugar de llevarlas debajo del brazo, las podrá llevar en su computadora, en su tablet o en su teléfono celular. De modo que, para su tranquilidad y regularidad intestinal, con BarcelonaDigital usted podrá seguir leyendo Revista Barcelona en su transporte público favorito y en su baño de confianza.</p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="container-features">
+							<div class="col-md-5 col-md-offset-1 no-limit features">
+								<p>Llegamos a todo el globo, sin límites de distancias, recorridos, monopolios ni cepos cambiarios.
+									Aquí encontrará las mismas genialidades e imbecilidades que se publican cada dos semanas en la Revista Barcelona convencional</p>
+							</div>
+							<div class="col-md-5 digital features">
+								<p>En lugar de llevarlas debajo del brazo, las podrá llevar en su computadora, en su tablet o en su teléfono celular. De modo que, para su tranquilidad y regularidad intestinal, con Barcelona Digital usted podrá seguir leyendo en su transporte público favorito y en su baño de confianza.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="suscription container">
-		<h2>Suscribase</h2>
-		<p>Suscribiéndose a BarcelonaDigital tendrá, antes que nadie, cada nuevo número de Revista Barcelona en cualquiera de sus dispositivos digitales. Sólo le hace falta conexión a Internet (y pagar el abono).</p>
-		<p>¿Qué espera para entrar al fabuloso mundo de BarcelonaDigital?</p>
-		<div class="paiment-plan row">
- 					<h3 class="sub-tittle">
- 					<div class="small container-plan">
- 						<div class="plan col-sm-4 col-xs-12">
- 							<div class="head">
+	<section id="planes" class="suscription">
+		<div class="container options">
+			<div class="row">
+				<div class="col-md-4 text-options">
+					<h2>Suscribase</h2>
+					<p>Suscribiéndose a BarcelonaDigital tendrá, antes que nadie, cada nuevo número de Revista Barcelona en cualquiera de sus dispositivos digitales. Sólo le hace falta conexión a Internet (y pagar el abono).</p>
+					<p class="bold">¿Qué espera para entrar al fabuloso mundo de BarcelonaDigital?</p>
+					 <button class="btn btn-primary desktop">Suscribirme</button>
+				</div>
+				<div class="paiment-plan col-md-8">
+					<div class="small container-plan">
+						<div class="plan col-sm-4 col-xs-12">
+							<div class="head">
+								<p class="signo">$</p>
+								<p class="precio">85</p>
+								<p class="moneda">Pesos</p>
+	 					</div>
+							<div class="ventajas">
+								<h4 class="periodo ch-3">3 Meses</h4>
+							 	<p class="items">Acceso a todos los numeros*</p>
+							 	<p class="items">Crédito, Débito o Deposito</p>
+							 	<p class="items">Renovación automática</p>
+							 	<div class="choise">
+							 		<label for="3-months" class="select-plan">
+	 						 		<input type="radio" value="3" name="suscription-opcion" id="3-months" class="select-plan">
+	 						 		<span>Quiero éste plan</span>
+							 		</label>
+	 						</div>
+							</div>
+	 				</div>
+	 					<div class="plan card col-sm-4 col-xs-12 ">
+	 						<div class="head">
 	 							<p class="signo">$</p>
-	 							<p class="precio">85</p>
+	 							<p class="precio">30</p>
 	 							<p class="moneda">Pesos</p>
-		 					</div>
+	 						</div>
 	 						<div class="ventajas">
-	 							<h4 class="periodo ch-3">3 Meses</h4>
+	 							<h4 class="periodo">Mensual</h4>
+	 							<p class="items">Renovable todos los meses</p>
+	 						 	<p class="items">Solo Tarjeta de Crédito</p>
 	 						 	<p class="items">Acceso a todos los numeros*</p>
-	 						 	<p class="items">Crédito, Débito o Deposito</p>
-	 						 	<p class="items">Renovación automática</p>
 	 						 	<div class="choise">
-	 						 		<label for="3-months" class="select-plan">
-		 						 		<input type="radio" value="3" name="suscription-opcion" id="3-months" class="select-plan">
+	 						 		<label for="monthly" class="select-plan">
+		 						 		<input type="radio" checked=selectedSubscription value="0" name="suscription-opcion" id="monthly" class="select-plan">
 		 						 		<span>Quiero éste plan</span>
 	 						 		</label>
-		 						</div>
+	 						 	</div>
 	 						</div>
-		 				</div>
-		 					<div class="plan card col-sm-4 col-xs-12 ">
-		 						<div class="head">
-		 							<p class="signo">$</p>
-		 							<p class="precio">30</p>
-		 							<p class="moneda">Pesos</p>
-		 						</div>
-		 						<div class="ventajas">
-		 							<h4 class="periodo">Mensual</h4>
-		 							<p class="items">Renovable todos los meses</p>
-		 						 	<p class="items">Solo Tarjeta de Crédito</p>
-		 						 	<p class="items">Acceso a todos los numeros*</p>
-		 						 	<div class="choise">
-		 						 		<label for="monthly" class="select-plan">
-			 						 		<input type="radio" checked=selectedSubscription value="0" name="suscription-opcion" id="monthly" class="select-plan">
-			 						 		<span>Quiero éste plan</span>
-		 						 		</label>
-		 						 	</div>
-		 						</div>
-		 					</div>
-		 					<div class="plan col-sm-4 col-xs-12">
-		 						<div class="head">
-		 							<p class="signo">$</p>
-		 							<p class="precio">160</p>
-		 							<p class="moneda">Pesos</p>
-		 						</div>
-		 						<div class="ventajas">
-		 							<h4 class="periodo">6 Meses</h4>
-		 						 	<p class="items">Acceso a todos los número*</p>
-		 						 	<p class="items">Renovación automática</p>
-		 						 	<p class="items">Crédito, Débito o Deposito</p>
-		 						 	<div class="choise">
-		 						 		<label for="6-months" class="select-plan">
-			 						 		<input type="radio" value="6" checked=selectedSubscription  name="suscription-opcion" id="6-months" class="select-plan" >
-			 						 		<span>Quiero éste plan</span>
-	 						 			</label>
-		 							</div>
-		 						</div>
-		 					</div>
- 					</div>
+	 					</div>
+	 					<div class="plan col-sm-4 col-xs-12">
+	 						<div class="head">
+	 							<p class="signo">$</p>
+	 							<p class="precio">160</p>
+	 							<p class="moneda">Pesos</p>
+	 						</div>
+	 						<div class="ventajas">
+	 							<h4 class="periodo">6 Meses</h4>
+	 						 	<p class="items">Acceso a todos los número*</p>
+	 						 	<p class="items">Renovación automática</p>
+	 						 	<p class="items">Crédito, Débito o Deposito</p>
+	 						 	<div class="choise">
+	 						 		<label for="6-months" class="select-plan">
+		 						 		<input type="radio" value="6" checked=selectedSubscription  name="suscription-opcion" id="6-months" class="select-plan" >
+		 						 		<span>Quiero éste plan</span>
+							 			</label>
+	 							</div>
+	 						</div>
+	 					</div>
+					</div>
+		 		</div>
+	 		</div>
  		</div>
- 		<button>Suscribirme</button>
+ 		<button class="btn btn-primary mobile">Suscribirme</button>
 	</section>
-	<footer class="contact-us">
+	<footer id="contact-us" class="contact-us">
 		<div class="container">
 			<h2>¿Desea consultarnos algo?</h2>
 			<p>Hagalo en nuestro formulario de consulta.</p>
-			<form action="contact">
-				<input type="text" name="nombre" placeholder"su nombre" required >
-				<input type="email" name="email" placeholder="@mail" required>
-				<input type="text" name="body" placeholder="ingrese su consulta">
-				<input type="submit" class="submit" value="consultar">
-				<label for="catcha">ingrese el codigo</label>
-				<input type="text" name="carcha" required>
-			</form>
+			<div class="container">
+				<div class="row">
+					<form class="contact" action="contact">
+						<div class="col-md-6 dates">
+							<p><input type="text" name="nombre" placeholder"su nombre" class="personal-dates" required ></p>
+							<p><input type="email" name="email" placeholder="@mail" class="personal-dates" required></p>
+							<p><label for="catcha">ingrese el codigo</label></p>
+							<p><input type="text" name="capcha" required></p>
+						</div>
+						<div class="col-md-6">
+							<p><textarea type="text" name="body" placeholder="ingrese su consulta" class="consulta" required></textarea></p>
+						</div>
+						<input type="submit" class="submit" value="consultar" class="send">
+					</form>
+				</div>
+			</div>
 		</div>
 	</footer>
 	<footer>

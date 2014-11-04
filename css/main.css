@@ -1,4 +1,366 @@
+/*VARIABLES*/
+/*@back-btn-compra: 		"../images/bd_sprite_pagos.svg";*/
+/*GENERAL STYLES*/
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
+  font-size: 16px;
+}
+a {
+  color: #e10179;
+}
+a:hover {
+  color: #ff004e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ff004e;
+}
+.btn-primary {
+  background-color: #00e5e6;
+  border-color: #00e5e6;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #278f84;
+  border-color: #278f84;
+}
+/*STYLES*/
+.main {
+  margin: 0;
+}
+.header {
+  /*background: url(../images/header.jpg) center center no-repeat;*/
+}
+.container-menu {
+  height: 65px;
+  background-color: #278f84;
+  /*position: fixed;*/
+  z-index: 1100;
+  width: 100%;
+}
+.container-menu .menu-nav {
+  /*padding-top: 1%;*/
+}
+.container-menu .logo {
+  text-indent: -9999px;
+  background: url(../images/bd_logo.png) top left no-repeat;
+  width: 250px;
+  height: 50px;
+  float: left;
+  margin: 0;
+  display: block;
+  position: relative;
+  top: 10px;
+}
+.container-menu .menu .list {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  height: 100%;
+}
+.container-menu .menu .list .go {
+  text-decoration: none;
+  height: 100%;
+  width: 115px;
+  text-align: center;
+  line-height: 65px;
+  padding: 0 1rem;
+  display: block;
+  color: white;
+  font-weight: 400;
+}
+.container-menu .menu .list .go:hover,
+.container-menu .menu .list .go:focus {
+  color: #eeeeee;
+  font-size: 1.5rem;
+}
+.container-menu .menu .list .login {
+  border: 1px solid white;
+  border-radius: 5px;
+  line-height: 40px;
+  height: 42px;
+  padding-left: 10%;
+  margin-left: 14%;
+}
+.container-menu .menu .list .login:hover,
+.container-menu .menu .list .login:focus {
+  background-color: #ff004e;
+  border-color: #ff004e;
+  color: white;
+  font-size: 16px;
+}
+.container-menu .menu .list .login:focus,
+.container-menu .menu .list .login:active {
+  outline-offset: -2px;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.inline {
+  display: inline-block;
+}
+.welcome {
+  height: 50rem;
+  margin-top: 10% !important;
+}
+.welcome .tittle {
+  font-size: 6rem;
+  font-weight: 300;
+}
+.welcome .copy {
+  font-size: 1.8rem;
+  margin-bottom: 5%;
+}
+.welcome .call-to-action {
+  padding-left: 0;
+}
+.welcome .container-goplan {
+  padding-left: 0;
+  padding-top: 3%;
+}
+.welcome .container-goplan .goplan {
+  width: 100%;
+  height: 45px;
+  font-size: 1.6rem;
+  clear: right;
+  padding-left: 0;
+}
+.welcome .go-libray {
+  clear: left;
+  margin: 5% 5%;
+  padding-top: 5%;
+  display: block;
+}
+/*QUE ES BARCELONA*/
+.barcelona {
+  margin: 15% auto;
+  height: 740px;
+}
+.barcelona .tittle-bd {
+  font-size: 3.5rem;
+  margin-bottom: 4%;
+}
+.barcelona .intro {
+  text-align: center;
+}
+.barcelona .container-features {
+  margin: 38% 0px;
+}
+.barcelona .container-features .features {
+  font-size: 1.8rem;
+  margin-top: 10%;
+}
+.barcelona .container-features .features:before {
+  background: url(../images/sprite_bcd.png) no-repeat top left;
+  position: absolute;
+  content: "";
+}
+.barcelona .container-features .no-limit:before {
+  background-position: 0 0;
+  width: 260px;
+  height: 305px;
+  top: -315px;
+  left: 76px;
+}
+.barcelona .container-features .digital:before {
+  background-position: -300px 0;
+  width: 260px;
+  height: 305px;
+  top: -315px;
+  left: 100px;
+}
+/* SUSCRIPCION ITEMS*/
+.suscription {
+  background-color: #eeeeee;
+  height: 580px;
+}
+.suscription .options {
+  padding-top: 7%;
+}
+.suscription .text-options {
+  margin-top: 3%;
+}
+.suscription .text-options .bold {
+  font-weight: 500;
+  margin-top: 10%;
+}
+.suscription .text-options .desktop {
+  /*boton visible en desktop*/
+  margin-top: 10%;
+  width: 200px;
+}
+@media (max-width: 991px) {
+  .suscription .text-options .desktop {
+    display: none;
+  }
+}
+@media (min-width: 990px) {
+  .mobile {
+    display: none;
+  }
+}
+.options-suscribe {
+  background: #777777;
+}
+.row {
+  margin: 0;
+}
+.tittle {
+  color: #e10179;
+  font-size: 1.9em;
+  margin: 4% 0px 6%;
+}
+.hello {
+  margin-bottom: 4%;
+  margin-top: 3%;
+  color: #555555;
+}
+.sub-tittle {
+  font-size: 1.25em;
+  font-weight: 300;
+  margin-top: 2%;
+}
+.number {
+  position: relative;
+  top: 5px;
+  font-size: 1.6em;
+  color: #ff1f63;
+  margin-right: 1%;
+}
+.paiment-plan .plan {
+  text-align: center;
+  width: 200px;
+  margin: 4px;
+  margin-bottom: 10%;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 15px;
+  background-color: white;
+}
+.paiment-plan .plan:hover,
+.paiment-plan .plan:active,
+.paiment-plan .plan:focus {
+  box-shadow: 0px 0px 7px #eb0048;
+  border-color: #eb0048;
+}
+.paiment-plan .plan .head {
+  background-color: #eb0048;
+  height: 80px;
+  padding-top: 16px;
+  color: white;
+}
+.paiment-plan .card {
+  width: 230px;
+}
+.paiment-plan .card:after {
+  left: -62px;
+}
+.paiment-plan .card .moneda {
+  left: 90px;
+}
+.paiment-plan .signo {
+  position: absolute;
+  left: 55px;
+  top: 15px;
+  font-size: 18px;
+}
+.paiment-plan .precio {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+}
+.paiment-plan .moneda {
+  font-size: 14px;
+  left: 78px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 53px;
+}
+.paiment-plan .moneda:after {
+  border-left: 98px solid transparent;
+  border-right: 98px solid transparent;
+  left: -78px;
+  position: absolute;
+  top: 23px;
+  border-top: 22px solid #eb0048;
+  content: "";
+}
+.paiment-plan .periodo {
+  padding-top: 10%;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.paiment-plan .ventajas {
+  background: #ffffff;
+}
+.paiment-plan .ventajas .items {
+  padding: 10px 0px;
+  margin: 0;
+}
+.paiment-plan .ventajas .items:nth-child(2n+1) {
+  background-color: #eeeeee;
+}
+.paiment-plan .ventajas .choise {
+  padding: 2%;
+  margin: 0 5% 2%;
+}
+.paiment-plan .ventajas input[type=radio] + span {
+  color: #555555;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  border: 2px solid #bababa;
+  margin: 0;
+  padding: 6% 15%;
+  border-radius: 6px;
+  overflow: auto;
+  display: block;
+}
+.paiment-plan .ventajas input[type=radio]:checked + span {
+  color: white;
+  font-style: normal;
+  font-size: 11px;
+  text-transform: uppercase;
+  background: #d10040;
+  border: 2px solid #d10040;
+}
+.paiment-plan .ventajas .select-plan {
+  padding: 10% 0px 6%;
+  display: block;
+  margin: 2% 0;
+}
+.paiment-plan .ventajas .select-plan > input {
+  display: none;
+}
+.paiment-plan .ventajas .select-plan:focus {
+  background: #eb0048;
+}
+/*CONTACT-US*/
+.contact-us {
+  text-align: center;
+}
+.contact-us .contact {
+  padding-top: 5%;
+  height: 500px;
+}
+.contact-us .contact .personal-dates {
+  width: 100%;
+  padding-left: 15%;
+  height: 50px;
+  border: 2px solid #278f84;
+  border-radius: 5px;
+}
+.contact-us .contact .consulta {
+  width: 100%;
+  height: 200px;
+  padding-top: 0;
+}
+.contact-us .contact .send {
+  float: right;
 }
