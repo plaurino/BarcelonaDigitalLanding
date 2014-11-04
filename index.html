@@ -76,7 +76,7 @@
 		<div class="container options">
 			<div class="row">
 				<div class="col-md-4 text-options">
-					<h2>Suscribase</h2>
+					<h2>Suscríbase</h2>
 					<p>Suscribiéndose a BarcelonaDigital tendrá, antes que nadie, cada nuevo número de Revista Barcelona en cualquiera de sus dispositivos digitales. Sólo le hace falta conexión a Internet (y pagar el abono).</p>
 					<p class="bold">¿Qué espera para entrar al fabuloso mundo de BarcelonaDigital?</p>
 					 <button class="btn btn-primary desktop">Suscribirme</button>
@@ -150,26 +150,30 @@
 		<div class="container">
 			<h2>¿Desea consultarnos algo?</h2>
 			<p>Hagalo en nuestro formulario de consulta.</p>
-			<div class="container">
+			<div class="container max-w">
 				<div class="row">
-					<form class="contact" action="contact">
-						<div class="col-md-6 dates">
-							<p><input type="text" name="nombre" placeholder"su nombre" class="personal-dates" required ></p>
-							<p><input type="email" name="email" placeholder="@mail" class="personal-dates" required></p>
-							<p><label for="catcha">ingrese el codigo</label></p>
-							<p><input type="text" name="capcha" required></p>
+					<form class="contact" action="contact" role="form">
+						<p class="small text-left">Respondemos tus preguntas de inmediato.</p>
+						<div class="form-group col-md-5 personal-input">					
+							<input type="text" name="nombre" placeholder="Tu nombre" class="form-control input" required >
+							<input type="email" name="email" placeholder="@mail" class="form-control input" required>
+							<div class="captcha-fail input">código Captcha</div>
+							<div class="input-group">
+								<div class="input-group-addon">código</div>
+								<input type="text" name="captcha" class="form-control" required>
+							</div>
 						</div>
-						<div class="col-md-6">
-							<p><textarea type="text" name="body" placeholder="ingrese su consulta" class="consulta" required></textarea></p>
+						<div class="form-group col-md-7">
+							<textarea type="text" name="body" placeholder="ingrese su consulta" class="form-control text-area" required></textarea>
 						</div>
-						<input type="submit" class="submit" value="consultar" class="send">
+						<div class="col-md-12"><input type="submit" value="consultar" class="btn btn-default send"></div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</footer>
-	<footer>
-		<div class="social">
+	<footer class="social">
+		<div class="container">
 			<p>twitter</p>
 			<p>facebook</p>
 			<p>otros</p>

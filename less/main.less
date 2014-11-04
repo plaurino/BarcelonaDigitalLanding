@@ -1,4 +1,5 @@
-/*VARIABLES*/
+// VARIABLES
+
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
@@ -22,7 +23,6 @@
 @color-compra: 					darken(@color-precio, 5%);
 @border-compra: 				#bababa;
 @back-magenta-hover: 		rgba(255,5,82,0.2);
-/*@back-btn-compra: 		"../images/bd_sprite_pagos.svg";*/
 
 /*GENERAL STYLES*/
 
@@ -445,27 +445,57 @@ h6 {
 
 .contact-us {
 	text-align: center;
+	padding-top: 5%;
+
+	.max-w {
+		max-width: 800px;
+	}
 
 	.contact {
 		padding-top: 5%;
-		height: 500px;
+		height: 450px;
 
-		.personal-dates {
-			width: 100%;
-			padding-left: 15%;
-			height: 50px;
-			border: 2px solid @cyan-header;
-			border-radius: 5px;
+		.personal-input {
+			padding-left: 0;
 		}
 
-		.consulta {
+		.input {
+			margin-bottom: 3%;
+		}
+
+		.captcha-fail {
 			width: 100%;
-			height: 200px;
-			padding-top: 0;
+			height: 60px;
+			background-color: @brand-warning;
+		}
+
+		.captcha {
+			display: inline-block;
+			font-size: 12px;
+			font-weight: 300;
+			text-align: left;
+		}
+
+		.text-area {
+			height: 192px;
 		}
 
 		.send {
 			float: right;
+			width: 200px;
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: @cyan-header;
+				color: white;
+			}
 		}
 	}
+}
+
+/*FOOTER*/
+.social {
+	background-color: @gray-dark;
+	height: 200px;
 }
