@@ -18,6 +18,10 @@ h5,
 h6 {
   color: #ff004e;
 }
+em {
+  font-style: normal;
+  font-weight: 400;
+}
 .btn-primary {
   background-color: #00e5e6;
   border-color: #00e5e6;
@@ -128,14 +132,14 @@ h6 {
 }
 .welcome .go-libray {
   clear: left;
-  margin: 5% 5%;
+  margin: 5% 0;
   padding-top: 5%;
   display: block;
 }
 /*QUE ES BARCELONA*/
 .barcelona {
   margin: 15% auto;
-  height: 740px;
+  /*height: 740px;*/
 }
 .barcelona .tittle-bd {
   font-size: 3.5rem;
@@ -148,8 +152,7 @@ h6 {
   margin: 38% 0px;
 }
 .barcelona .container-features .features {
-  font-size: 1.8rem;
-  margin-top: 10%;
+  /*margin-top: 10%;*/
 }
 .barcelona .container-features .features:before {
   background: url(../images/sprite_bcd.png) no-repeat top left;
@@ -158,17 +161,17 @@ h6 {
 }
 .barcelona .container-features .no-limit:before {
   background-position: 0 0;
-  width: 260px;
-  height: 305px;
-  top: -315px;
-  left: 76px;
+  width: 163px;
+  height: 197px;
+  top: -218px;
+  left: 126px;
 }
 .barcelona .container-features .digital:before {
-  background-position: -300px 0;
-  width: 260px;
-  height: 305px;
-  top: -315px;
-  left: 100px;
+  background-position: -194px 0;
+  width: 201px;
+  height: 192px;
+  top: -218px;
+  left: 136px;
 }
 /* SUSCRIPCION ITEMS*/
 .suscription {
