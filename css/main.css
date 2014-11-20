@@ -99,6 +99,7 @@ em {
 .container-menu .menu .list .login:focus,
 .container-menu .menu .list .login:active {
   outline-offset: -2px;
+  -webkit-box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .inline {
@@ -112,6 +113,11 @@ em {
   font-size: 6rem;
   font-weight: 300;
 }
+@media (max-width: 991px) {
+  .welcome .tittle {
+    text-align: center;
+  }
+}
 .welcome .copy {
   font-size: 1.8rem;
   margin-bottom: 5%;
@@ -121,6 +127,7 @@ em {
 }
 .welcome .container-goplan {
   padding-left: 0;
+  padding-right: 0;
   padding-top: 3%;
 }
 .welcome .container-goplan .goplan {
@@ -130,11 +137,21 @@ em {
   clear: right;
   padding-left: 0;
 }
-.welcome .go-libray {
+.welcome .container-go-library {
+  padding-left: 0;
+  padding-right: 0;
+}
+.welcome .container-go-library .go-libray {
   clear: left;
   margin: 5% 0;
   padding-top: 5%;
   display: block;
+}
+@media (max-width: 991px) {
+  .welcome .container-go-library .go-libray {
+    margin: 0;
+    text-align: center;
+  }
 }
 /*QUE ES BARCELONA*/
 .barcelona {
@@ -166,6 +183,11 @@ em {
   top: -218px;
   left: 126px;
 }
+@media (max-width: 991px) {
+  .barcelona .container-features .no-limit:before {
+    left: 87px;
+  }
+}
 .barcelona .container-features .digital:before {
   background-position: -194px 0;
   width: 201px;
@@ -173,16 +195,36 @@ em {
   top: -218px;
   left: 136px;
 }
+@media (max-width: 991px) {
+  .barcelona .container-features .digital:before {
+    left: 60px;
+  }
+}
 /* SUSCRIPCION ITEMS*/
 .suscription {
   background-color: #eeeeee;
   height: 580px;
 }
+@media (max-width: 991px) {
+  .suscription {
+    height: 820px;
+  }
+}
 .suscription .options {
   padding-top: 7%;
 }
+@media (max-width: 991px) {
+  .suscription .options {
+    padding-top: 3%;
+  }
+}
 .suscription .text-options {
   margin-top: 3%;
+}
+@media (max-width: 991px) {
+  .suscription .text-options {
+    text-align: center;
+  }
 }
 .suscription .text-options .bold {
   font-weight: 500;
@@ -198,8 +240,19 @@ em {
     display: none;
   }
 }
-@media (min-width: 990px) {
-  .mobile {
+.vertical-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 7%;
+}
+.vertical-container .mobile {
+  margin: auto;
+  width: 200px;
+}
+@media (min-width: 992px) {
+  .vertical-container .mobile {
     display: none;
   }
 }
@@ -231,6 +284,12 @@ em {
   color: #ff1f63;
   margin-right: 1%;
 }
+.paiment-plan .container-plan {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
 .paiment-plan .plan {
   text-align: center;
   width: 200px;
@@ -239,14 +298,21 @@ em {
   padding: 0;
   border-radius: 4px;
   border: 1px solid #eeeeee;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   top: 15px;
   background-color: white;
 }
+@media (max-width: 991px) {
+  .paiment-plan .plan {
+    margin: auto;
+  }
+}
 .paiment-plan .plan:hover,
 .paiment-plan .plan:active,
 .paiment-plan .plan:focus {
+  -webkit-box-shadow: 0px 0px 7px #eb0048;
   box-shadow: 0px 0px 7px #eb0048;
   border-color: #eb0048;
 }

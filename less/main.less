@@ -160,6 +160,10 @@ em {
 	.tittle {
 		font-size: 6rem;
 		font-weight: 300;
+
+		@media (max-width: 991px) {
+			text-align: center;
+		}
 	}
 	
 	.copy {
@@ -173,6 +177,7 @@ em {
 
 	.container-goplan {
 		padding-left: 0;
+		padding-right: 0;
 		padding-top: 3%;
 
 		.goplan {
@@ -184,13 +189,24 @@ em {
 		}
 	}
 	
-	.go-libray {
-		clear: left;
-		margin: 5% 0;
-		padding-top: 5%;
-		display: block;
+	.container-go-library{
+		padding-left: 0;
+		padding-right: 0;
+
+		.go-libray {
+			clear: left;
+			margin: 5% 0;
+			padding-top: 5%;
+			display: block;
+
+			@media (max-width: 991px) {
+				margin: 0;
+				text-align: center;
+			}
+		}
 	}
-}
+
+} //end general
 
 /*QUE ES BARCELONA*/
 .backgroud-mixin (@pos-left, @pos-top, @width, @height, @top){
@@ -230,6 +246,10 @@ em {
 			&:before{
 				.backgroud-mixin (0,0,163px,197px,-218px);
 				left: 126px;
+
+				@media (max-width: 991px) {
+					left: 87px;
+				}
 			}
 		}
 
@@ -237,6 +257,10 @@ em {
 			&:before{
 				.backgroud-mixin (-194px,0,201px,192px,-218px);
 				left: 136px;
+
+				@media (max-width: 991px) {
+					left: 60px;
+				}
 			}
 		}
 	}
@@ -247,12 +271,24 @@ em {
 	background-color: @gray-lighter;
 	height: 580px;
 
+	@media (max-width: 991px) {
+		height: 820px;
+	}
+
 	.options {
 		padding-top: 7%;
+
+		@media (max-width: 991px) {
+			padding-top: 3%;
+		}
 	}
 
 	.text-options {
 		margin-top: 3%;
+
+		@media (max-width: 991px) {
+			text-align: center;
+		}
 
 		.bold {
 			font-weight: 500;
@@ -269,10 +305,17 @@ em {
 		}
 	}
 }
+.vertical-container {
+	display: flex;
+	margin-top: 7%;
+	
+	.mobile {
+		margin: auto;
+		width: 200px;
 
-.mobile {
-	@media (min-width: 990px){
-		display: none;
+		@media (min-width: 992px){
+			display: none;
+		}
 	}
 }
 
@@ -313,7 +356,10 @@ em {
 // ELECCION DEL PLAN DE PAGO
 
 .paiment-plan {
-	
+	.container-plan {
+		display: flex;
+	}
+
 	.plan {
 		text-align: center;
 		width: 200px;
@@ -326,6 +372,10 @@ em {
 		position: relative;
 		top: 15px;
 		background-color: white;
+
+		@media (max-width: 991px) {
+			margin: auto;
+		}
 
 		&:hover,
 		&:active,
