@@ -4,7 +4,7 @@
   "description": "Landing de Barcelona Digital",
   "main": "server.js",
   "scripts": {
-    "start": "server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
