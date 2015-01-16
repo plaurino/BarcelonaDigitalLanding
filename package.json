@@ -1,0 +1,15 @@
+{
+  "name": "BarcelonaDigitalLanding",
+  "version": "0.1.0",
+  "description": "Landing de Barcelona Digital",
+  "main": "server.js",
+  "scripts": {
+    "start": "server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "~3.3.4",
+    "serve-static": "~1.8.0"
+  }
+}
