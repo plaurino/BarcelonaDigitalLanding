@@ -130,7 +130,6 @@ em {
 .box-action {
   position: absolute;
   height: 100%;
-  width: 100%;
 }
 @media (max-width: 991px) {
   .box-action {
