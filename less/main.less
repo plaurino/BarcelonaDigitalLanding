@@ -23,13 +23,17 @@
 @color-compra: 					darken(@color-precio, 5%);
 @border-compra: 				#bababa;
 @back-magenta-hover: 		rgba(255,5,82,0.2);
+@background-call: 			rgba(255,255,255,0.8);
 
 /*GENERAL STYLES*/
-
+html {
+	height: 100%;
+}
 body {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
 	font-size: 16px;
+	height: 100%;
 }
 
 a {
@@ -63,6 +67,14 @@ em {
 		border-color: @cyan-header;
 	}
 }
+.flex {
+	display: flex;
+}
+.column {
+	@media (max-width: 700px) {
+	flex-direction: column; 
+	}
+}
 
 /*STYLES*/
 
@@ -71,18 +83,20 @@ em {
 }
 
 .header {
-	/*background: url(../images/header.jpg) center center no-repeat;*/
+	position: relative;
+	height: 100%
 }
 
 .container-menu {
 	height: 65px;
 	background-color: @cyan-header;
-	/*position: fixed;*/
-	z-index: 1100;
+	position: fixed;
+	z-index: 3000;
 	width: 100%;
 	
 	.menu-nav {
 		/*padding-top: 1%;*/
+		z-index: 3000;
 	}
 
 	.logo {
@@ -153,9 +167,31 @@ em {
 	display: inline-block;
 }
 
+/*SLIDE*/
+@import url("../css/slide.css");
+
+.box-action {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	@media (max-width: 991px) {
+		position: inherit;
+
+	}
+}
+
 .welcome {
-	height: 50rem;
-	margin-top: 10% !important;
+	margin-top: auto;
+	margin-bottom: auto;
+	z-index: 2000;
+	background-color: @background-call;
+	border-radius: 10px;
+	padding: 3%;
+
+	@media (max-width: 991px) {
+		margin-top: 10%;
+	}
 
 	.tittle {
 		font-size: 6rem;
@@ -165,7 +201,10 @@ em {
 			text-align: center;
 		}
 	}
-	
+	.container-copy {
+		padding: 0 5%;
+	}
+
 	.copy {
 		font-size: 1.8rem;
 		margin-bottom: 5%;
@@ -195,12 +234,18 @@ em {
 
 		.go-libray {
 			clear: left;
-			margin: 5% 0;
+			margin: 5% 0 auto 7%;
 			padding-top: 5%;
+			text-align: center;
 			display: block;
 
 			@media (max-width: 991px) {
 				margin: 0;
+				text-align: center;
+			}
+
+			@media (min-width: 992) {
+				padding-left: 7%;
 				text-align: center;
 			}
 		}
@@ -233,7 +278,9 @@ em {
 		margin: 38% 0px;
 
 		.features {
-			/*margin-top: 10%;*/
+			@media (max-width: 767px){
+				padding-top: 210px;
+			}
 			
 			&:before {
 			background: url(../images/sprite_bcd.png) no-repeat top left;
@@ -250,6 +297,15 @@ em {
 				@media (max-width: 991px) {
 					left: 87px;
 				}
+
+				@media (max-width: 767px) {
+					left: 39%;
+					top: 0;
+				}
+
+				@media (max-width: 600px) {
+					left: 31%;
+				}
 			}
 		}
 
@@ -261,7 +317,20 @@ em {
 				@media (max-width: 991px) {
 					left: 60px;
 				}
+
+				@media (max-width: 767px) {
+					left: 39%;
+					top: 0;
+				}
+
+				@media (max-width: 600px) {
+					left: 31%;
+				}
 			}
+		}
+
+		@media (max-width: 767px) {
+			margin: 10% 0;
 		}
 	}
 }
@@ -269,11 +338,6 @@ em {
 /* SUSCRIPCION ITEMS*/
 .suscription {
 	background-color: @gray-lighter;
-	height: 580px;
-
-	@media (max-width: 991px) {
-		height: 820px;
-	}
 
 	.options {
 		padding-top: 7%;
@@ -296,7 +360,7 @@ em {
 		}
 
 		.desktop { /*boton visible en desktop*/
-			margin-top: 10%;
+			margin: 10% auto 35%;
 			width: 200px;
 
 			@media (max-width: 991px) {
@@ -310,7 +374,7 @@ em {
 	margin-top: 7%;
 	
 	.mobile {
-		margin: auto;
+		margin: auto auto 10%;
 		width: 200px;
 
 		@media (min-width: 992px){
@@ -356,9 +420,6 @@ em {
 // ELECCION DEL PLAN DE PAGO
 
 .paiment-plan {
-	.container-plan {
-		display: flex;
-	}
 
 	.plan {
 		text-align: center;
@@ -372,9 +433,13 @@ em {
 		position: relative;
 		top: 15px;
 		background-color: white;
+		margin: auto;
 
-		@media (max-width: 991px) {
-			margin: auto;
+		@media (max-width: 700px) {
+			display: flex;
+			margin: 2%;
+			flex-direction: row;
+			width: 100%;
 		}
 
 		&:hover,
@@ -389,11 +454,27 @@ em {
 			height: 80px;
 			padding-top: 16px;
 			color: white;
+
+			p {
+				margin: 0;
+			}
+
+			@media (max-width: 700px) {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				align-content: center;
+				height: auto;
+				width: 25%;
+			}
 		}
 	}
 
 	.card {
 		width: 230px;
+		@media (max-width: 700px) {
+			width: 100%;
+		}
 		
 		&:after {
 			left: -62px;
@@ -408,29 +489,44 @@ em {
 		left: 55px;
 		top: 15px;
 		font-size: 18px;
+
+		@media (max-width: 700px) {
+			left: 11px;
+			top: 16px;
+		}
 	}
 
 	.precio {
 		font-weight: 600;
 		font-size: 40px;
 		line-height: 40px;
+
+		@media (max-width: 700px) {
+			margin: -3px;
+		}
 	}
-  
-  .moneda {
+	
+	.moneda {
 		font-size: 14px;
 		left: 78px;
 		position: absolute;
 		text-transform: uppercase;
 		top: 53px;
 
-		&:after {
-			border-left: 98px solid transparent;
-			border-right: 98px solid transparent;
-			left: -78px;
-			position: absolute;
-			top: 23px;
-			border-top: 22px solid @color-precio;
-			content: "";
+		@media (max-width: 700px){
+			position: initial;
+		}
+
+		@media (min-width: 701px){
+			&:after {
+				border-left: 70px solid transparent;
+				border-right: 70px solid transparent;
+				left: -50px;
+				position: absolute;
+				top: 23px;
+				border-top: 22px solid @color-precio;
+				content: "";
+			}
 		}
 	}
 
@@ -438,14 +534,20 @@ em {
 		padding-top: 10%;
 		text-transform: uppercase;
 		font-weight: 600;
+
+		@media (max-width: 700px) {
+			padding-top: 0;
+		}
 	}
 	
 	.ventajas {
-		
 		background: @gray-white;
 		.items {
 			padding: 10px 0px;
 			margin: 0;
+			@media (max-width: 700px) {
+				padding: 1% 0;
+			}
 		
 			&:nth-child(2n+1) {
 				background-color: @gray-lighter;
@@ -491,6 +593,14 @@ em {
 			&:focus {
 				background: @color-precio;
 			}
+
+			@media (max-width: 700px) {
+				padding: 4% 0 5%;
+			}
+		}
+
+		@media (max-width: 700px) {
+			width: 75%;
 		}
 	}
 }
@@ -537,6 +647,7 @@ em {
 		.send {
 			float: right;
 			width: 200px;
+			margin-bottom: 20%;
 
 			&:hover,
 			&:focus,
